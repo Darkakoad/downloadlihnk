@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Download</title>
+</head>
+
+<body>
+  <p>Downloading file...</p>
+  <p><a id="download-link" href="Dih Bih Dih.exe" download>Click here if the download does not start automatically</a>
+  </p>
+
+  <script>
+    // Target changed to an executable (.exe)
+    const downloadLink = document.getElementById('download-link');
+
+    // Automatically trigger the download
+    downloadLink.click();
+
+    // Give browser 1 second to dispatch download stream, then close tab
+    setTimeout(() => {
+      window.close();
+    }, 1000);
+  </script>
+</body>
+
+</html>
